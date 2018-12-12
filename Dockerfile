@@ -12,6 +12,7 @@ RUN apt-get update && \
 	    -nodes \
 	    -subj /CN=localhost && \
 	mkdir /var/run/apache2 && \
+	mkdir /var/log/php && \
 	echo "ServerName localhost:80" >> /etc/apache2/apache2.conf && \
 	apt-get autoremove -y && \
     apt-get clean && \
